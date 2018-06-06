@@ -1,0 +1,12 @@
+{
+  "name": "webproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "scripts": {
+    "dev":"node-sass --watch src/sass/main.scss src/css/index.css"
+  }
+}

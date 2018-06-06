@@ -1,0 +1,57 @@
+
+
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-feature {
+    padding: 20rem 0;
+    margin-top: -10rem;
+    position: relative;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('https://raw.githubusercontent.com/jonasschmedtmann/advanced-css-course/master/Natours/starter/img/nat-4.jpg');
+    background-position: top;
+    background-size: cover;
+    background-color: $color-grey-light-1;
+
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
+
+    //clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
+
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 25rem 25rem 10rem 25rem;
+    margin-top: -10rem;
+}
+
+.section-stories {
+    position: relative;
+    background-color: transparent;
+    padding: 15rem 0;
+}
+
+.section-book {
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
+    padding: 15rem 0;
+}
+
+.book {
+    height:50rem;
+    margin: 0 auto;
+    background-image: linear-gradient(105deg, rgba($color-white, 0.8) 0%, rgba($color-white, 0.8) 50%, transparent 50%),  url("https://raw.githubusercontent.com/jonasschmedtmann/advanced-css-course/master/Natours/starter/img/nat-10.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    @include shadow(0.3);
+
+    &__form {
+        width: 50%;
+    }
+}

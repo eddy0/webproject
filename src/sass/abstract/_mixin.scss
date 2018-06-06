@@ -1,0 +1,59 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin shadow($opacity) {
+  box-shadow: 0 1.5rem 4rem rgba(black, $opacity);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0-600px: phone
+600px-900px tablet patrait
+900-1200px landscape
+1200-1800px  normal style apply
+1800px++
+ */
+
+/*
+phone  600px
+pad  900px
+mac  1200px
+1200px - 1800px --- normal style apply
+pc  1800px
+
+1em = 16px
+
+ */
+
+
+@mixin respond($breakpoint) {
+    // 600px
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            @content
+        }
+    }
+    //900px
+    @if $breakpoint == pad {
+        @media (max-width: 56.25em) {
+            @content
+        }
+    }
+    //1200px
+    @if $breakpoint == mac {
+        @media (max-width: 75em) {
+            @content
+        }
+    }
+    //1800
+    @if $breakpoint == pc {
+        @media (min-width: 112.5em) {
+            @content
+        }
+    }
+}

@@ -1,0 +1,39 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;  // 1rem = 10px 10/16px = 62.5%
+
+
+    @include respond(mac) {
+        font-size: 56.25%;
+    } // 1 rem = 90px => 9 / 16
+
+    @include respond(pad) {
+        font-size: 50%;
+    } // 1rem = 8px , 8 / 16 = 50%
+
+    //@include respond(phone) {
+    //    font-size: 30%;
+    //}
+
+    @include respond(pc) {
+        font-size: 75%;
+    } // 1rem = 12 12/16
+
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
