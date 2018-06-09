@@ -4,6 +4,10 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(pad) {
+        padding: 6rem 0;
+    }
+
     &__logo-box {
         text-align: center;
     }
@@ -17,6 +21,11 @@
         display: inline-block;
         border-top: 1px solid rgba(white, 0.1);
         padding-top: 2rem;
+
+        @include respond(pad) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -43,8 +52,16 @@
     }
 
     &__copy-right {
+
         border-top: 1px solid rgba(white, 0.1);
         padding-top: 2rem;
+        width: 80%;
+        float: right;
+        @include respond(pad) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
 
     }
 

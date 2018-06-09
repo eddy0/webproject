@@ -9,8 +9,16 @@
     @include shadow(0.2);
     transform: skewX(-15deg);
 
+    @include respond(pad) {
+        padding: 4rem;
+        transform:none;
+    }
+
     & > * {
         transform: skewX(15deg);
+        @include respond(pad) {
+            transform:none;
+        }
     }
 
 
@@ -24,6 +32,13 @@
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem)  skewX(15deg) ;
+
+        @include respond(pad) {
+            width: 10rem;
+            height: 10rem;
+            transform: translateX(-1rem);
+
+        }
     }
 
     &__img {

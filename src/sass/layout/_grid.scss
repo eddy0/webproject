@@ -18,8 +18,19 @@
   margin: 0 auto;
   @include clearfix;
 
+  @include respond(pad) {
+    max-width: 50rem;
+    padding: 2rem;
+  }
+
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(pad) {
+      margin-bottom: $gutter-vertical-sm;
+    }
+
   }
 
   [class^="col-"] {
@@ -27,7 +38,18 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(pad) {
+        margin-right: 0 !important;
+        margin-bottom: $gutter-vertical;
+      }
     }
+
+    @include respond(pad) {
+      width: 100%!important;
+
+    }
+
   }
 
   .col-1-of-2 {
